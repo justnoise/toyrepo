@@ -12,6 +12,8 @@ CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 CURRENT_TAG=$(git tag -l --points-at HEAD | head -n 1)
 
+sleep 10
+
 echo "current branch: $CURRENT_BRANCH"
 echo "current tag: $CURRENT_TAG"
 
@@ -22,3 +24,9 @@ fi
 if [[ $CURRENT_BRANCH == "master" ]]; then
     echo "we are currently on master"
 fi
+
+echo "done"
+
+sleep 10
+
+echo "totally done"
